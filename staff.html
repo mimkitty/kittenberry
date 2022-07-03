@@ -1,67 +1,160 @@
+
 <!DOCTYPE html>
-<!-- saved from url=(0032)https://htmledit.squarefree.com/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Real-time HTML Editor</title>
-<script type="text/javascript">
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" type="image/x-icon" href="https://i.imgur.com/xs2ZITS.png">
 
-var editboxHTML = 
-'<html class="expand close">' +
-'<head>' +
-'<style type="text/css">' +
-'.expand { width: 100%; height: 100%; }' +
-'.close { border: none; margin: 0px; padding: 0px; }' +
-'html,body { overflow: hidden; }' +
-'<\/style>' +
-'<\/head>' +
-'<body class="expand close" onload="document.f.ta.focus(); document.f.ta.select();">' +
-'<form class="expand close" name="f">' +
-'<textarea class="expand close" style="background: #def;" name="ta" wrap="hard" spellcheck="false">' +
-'<\/textarea>' +
-'<\/form>' +
-'<\/body>' +
-'<\/html>';
-
-var defaultStuff = '<h3>Welcome to the real-time HTML editor!<\/h3>\n' +
-'<p>Type HTML in the textarea above, and it will magically appear in the frame below.<\/p>';
-
-// I don't want this stuff to appear in the box at the top because I feel it's likely to be distracting.
-var extraStuff = '<div style="position:absolute; margin:.3em; bottom:0em; right:0em;"><small>\n  Created by <a href="http://www.squarefree.com/" target="_top">Jesse Ruderman<\/a> and hosted by <a href="http://www.dreamhost.com/rewards.cgi?jesseruderman" target="_top">DreamHost<\/a>.\n<\/small><\/div>';
-
-var old = '';
-         
-function init()
-{
-  window.editbox.document.write(editboxHTML);
-  window.editbox.document.close();
-  window.editbox.document.f.ta.value = defaultStuff;
-  update();
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&display=swap" rel="stylesheet">
+<title>kittenberry studios</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Verdana;
 }
 
-function update()
-{
-  var textarea = window.editbox.document.f.ta;
-  var d = dynamicframe.document; 
-
-  if (old != textarea.value) {
-    old = textarea.value;
-    d.open();
-    d.write(old);
-    if (old.replace(/[\r\n]/g,'') == defaultStuff.replace(/[\r\n]/g,''))
-      d.write(extraStuff);
-    d.close();
-  }
-
-  window.setTimeout(update, 150);
+  ::selection {
+  background: #FFA5B1;
 }
 
-</script>
+body {
+  margin: 0;
+  font-family: Verdana;
+   background-image: url("https://i.imgur.com/AoDpS5l.png");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+#kittenberry-title {
+color:#814147;
+font-family: 'Fraunces', serif;
+text-align:center;
+font-size: 28px;
+background-color: #FFFBF2;
+}
+
+/* Style the top navigation bar */
+.topnav {
+
+  overflow: hidden;
+  background-color: #FFF;
+  
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #814147;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ffa5b1;
+  color: #FFFBF2;
+}
+
+/* Style the content */
+.content {
+border: 50px solid transparent;
+border-style: solid none solid none;
+  background-color: #FFF;
+  padding: 10px;
+  color: #814147;
+  text-align:center;
+  border-image: url("https://i.imgur.com/I8Eh6Ta.png") round;
+  border-image-slice: 30%;
+border-image-outset: 25px;
+
+
+ 
+}
+
+/* Style the footer */
+.footer {
+  background-color: #FFFBF2;
+  padding: 10px;
+  font-family: Verdana;
+  color:#814147;
+  font-size:11px;
+
+}
+.mySlides {display:none;}
+
+</style>
 </head>
+<body>
+<div id="kittenberry-title">
+<br>
+kittenberry studios <img width=25px src="https://i.imgur.com/xs2ZITS.png"> <br><br>
+</div><br>
 
-<frameset resizable="yes" rows="50%,*" onload="init();">
-  <!-- about:blank confuses opera, so use javascript: URLs instead -->
-  <frame name="editbox" src="javascript:&#39;&#39;;">
-  <frame name="dynamicframe" src="javascript:&#39;&#39;;">
-</frameset>
+<br>
 
+<div class="content">
+<div class="topnav">
+ <a href="index.html" ><img width=120px src="https://i.imgur.com/3BNtO7B.png"></a>
+            <a href="media.html" ><img width=120px src="https://i.imgur.com/IKKaoP4.png"></a>
+            <a href="staff.html" ><img width=120px src="https://i.imgur.com/hjHqTNv.png"></a>
+           
+</div>
+<br><br><br>
+Current/Major Staff for the Current Project <br>
+<p> CEO/Creative Director : Mimkitty <br>
+Lead Programmer : Anthony Funke <br>
+Cinematic Artist : Mazzy Woodring <br>
+Artists : QuinnDrawz, SunnyLeigh, Mimkitty, Mazzy Woodring <br>
+Music/SFX : Mimkitty <br>
+Writing : Mimkitty + contributions & suggestions from whole team <br>
+Web Designer : Mimkitty <br>
+All other minor roles or project-exclusive roles will be noted in the credits of the project.
+</p>
+
+ <br><br><br><br><br><br>
+</div>
+<br><br>
+
+
+<div class="footer">
+<a href="https://twitter.com/kittenberrytwt" ><img width=75px src="https://i.imgur.com/uTAGcxC.png"></a>
+<a href="https://www.instagram.com/kittenberrystudios/" ><img width=75px src="https://imgur.com/Dw8cSEM.png"></a>
+<a href="https://www.patreon.com/kittenberry" ><img width=75px src="https://imgur.com/FMaEsAo.png"></a>
+
+<a href=mailto:mimkitty@kittenberrystudios.com?subject="subject" ><img width=75px src="https://imgur.com/mqwQyCI.png"></a>
+
+<a href="https://kittenberry.itch.io/" ><img width=75px src="https://imgur.com/FftxoLz.png"></a>
+
+<a href="https://www.youtube.com/channel/UCQtZ1wBJ6Fr4A10FEDTM1iw" ><img width=75px src="https://imgur.com/EbT13F4.png"></a>
+
+<a href="https://www.facebook.com/kittenberrystudios" ><img width=75px src="https://imgur.com/C3lhhGl.png"></a>
+
+
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+
+</body>
 
 </html>
+
+
